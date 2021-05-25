@@ -45,4 +45,28 @@ plt.plot(xs,elu_graph)
 plt.show()
 
 
+def sigmoid(x):
+  return 1 / (1 + np.e**(-x))
 
+xs = np.arange(-10,10,0.01)
+sigmoid_graph = [sigmoid(x) for x in xs]
+
+_ = plt.figure()
+plt.vlines(0, 0, 1, colors='y')
+plt.hlines(0, -10, 10, colors='y')
+plt.title('sigmoid')
+plt.plot(xs,sigmoid_graph)
+plt.show()
+
+def tanh(x):
+  return np.tanh(x)
+
+xs = np.arange(-10,10,0.01)
+tanh_graph = [tanh(x) for x in xs]
+
+_ = plt.figure()
+plt.vlines(0, -1, 1, colors='y')
+plt.hlines(0, -10, 10, colors='y')
+plt.title('tanh')
+plt.plot(xs,tanh_graph)
+plt.show()

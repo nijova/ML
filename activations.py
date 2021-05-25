@@ -13,6 +13,19 @@ plt.title('relu')
 plt.plot(xs,relu_graph)
 plt.show()
 
+def leaky_relu(x, alpha=0.01):
+  return max(alpha*x,x)
+
+xs = np.arange(-10,10,0.01)
+leaky_relu_graph = [leaky_relu(x, 0.05) for x in xs]
+
+_ = plt.figure()
+plt.vlines(0, -1, 10, colors='y')
+plt.hlines(0, -10, 10, 'y')
+plt.title('leaky relu, alpha=%1.2f' % alpha)
+plt.plot(xs,leaky_relu_graph)
+plt.show()
+
 
 def elu(x, alpha):
   if x >= 0:

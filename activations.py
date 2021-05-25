@@ -8,5 +8,28 @@ xs = np.arange(-1,1,0.01)
 relu_graph = [relu(x) for x in xs]
 
 _ = plt.figure()
+plt.vlines(0, 0, 1, colors='y')
+plt.title('relu')
 plt.plot(xs,relu_graph)
 plt.show()
+
+
+def elu(x, alpha):
+  if x >= 0:
+    return x
+  else:
+    return alpha * (np.e**x -1)
+
+alpha = 2.
+xs = np.arange(-10,10,0.01)
+elu_graph = [elu(x, alpha) for x in xs]
+
+_ = plt.figure()
+plt.vlines(0, -2, 10, colors='y')
+plt.hlines(0, -10, 10, colors='y')
+plt.title('elu, alpha=%1.2f' % alpha) 
+plt.plot(xs,elu_graph)
+plt.show()
+
+
+

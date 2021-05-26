@@ -70,3 +70,9 @@ plt.hlines(0, -10, 10, colors='y')
 plt.title('tanh')
 plt.plot(xs,tanh_graph)
 plt.show()
+
+def softmax(logits):
+  logits = np.array(logits)
+  return np.e ** logits / np.sum(np.e ** logits)
+
+softmax([-1,0,1])

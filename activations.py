@@ -75,4 +75,9 @@ def softmax(logits):
   logits = np.array(logits)
   return np.e ** logits / np.sum(np.e ** logits)
 
-softmax([-1,0,1])
+#softmax([-1,0,1])
+
+def logsoftmax(logits):
+  return np.log(softmax(logits))
+
+#logsoftmax([1,3,2])

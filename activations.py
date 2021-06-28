@@ -80,4 +80,4 @@ def softmax(logits):
 def logsoftmax(logits):
   return np.log(softmax(logits))
 
-#logsoftmax([1,3,2])
+logsoftmax([1,3,2])

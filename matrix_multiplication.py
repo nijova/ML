@@ -1,3 +1,5 @@
+import numpy as np
+
 def matmul(m,n):
   result = []
   for r in range(m.shape[0]):
@@ -11,6 +13,6 @@ def matmul(m,n):
 a=np.arange(16).reshape(8,2)
 b=np.arange(8).reshape(2,4)
 
-matmul(a, b)
+print(matmul(a, b))
 
-np.matmul(a, b)
+print(np.matmul(a, b))
